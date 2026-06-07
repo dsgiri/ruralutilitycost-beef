@@ -41,21 +41,21 @@ export function Header({ currentView, setView }: HeaderProps) {
     <header className="bg-white border-b border-gray-200 text-gray-900 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-2 border-r border-gray-100 pr-6 mr-2">
+          <div className="flex items-center space-x-2 border-r border-gray-100 pr-4 sm:pr-6 mr-2">
             <button 
               onClick={() => handleNavClick('home')}
-              className="text-2xl font-black tracking-tight flex items-center gap-2"
+              className="text-xl sm:text-2xl font-black tracking-tight flex items-center gap-2"
             >
-              <div className="w-6 h-6 bg-orange-700 rounded-sm flex items-center justify-center text-[10px] text-white">B</div>
+              <div className="w-5 h-5 sm:w-6 sm:h-6 bg-orange-700 rounded-sm flex items-center justify-center text-[10px] text-white">B</div>
               <span>BEEF</span>
-              <div className="flex flex-col text-left ml-2 hidden sm:flex">
+              <div className="flex flex-col text-left ml-1 sm:ml-2 hidden sm:flex">
                 <span className="text-[10px] uppercase text-gray-400 font-bold leading-tight">Ecosystem</span>
                 <span className="text-xs font-semibold text-blue-900 leading-tight">ruralutilitycost.com</span>
               </div>
             </button>
           </div>
           
-          <nav className="hidden md:flex space-x-2 flex-1 ml-4 text-sm font-medium">
+          <nav aria-label="Main Navigation" className="hidden md:flex space-x-1 lg:space-x-2 flex-1 ml-2 lg:ml-4 text-sm font-medium">
             {navItems.map((item) => (
               <button
                 key={item.label}

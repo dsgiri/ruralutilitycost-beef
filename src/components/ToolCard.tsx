@@ -16,7 +16,7 @@ export function ToolCard({ tool, isFavorite, toggleFavorite }: ToolCardProps) {
   else if (tool.category.includes('Break-even') || tool.category.includes('Forecast')) categoryColor = "text-orange-700";
 
   return (
-    <div className="bg-white border border-gray-200 p-5 rounded-lg card-hover relative flex flex-col h-full">
+    <article aria-label={`Tool: ${tool.title}`} className="bg-white border border-gray-200 p-5 rounded-lg card-hover relative flex flex-col h-full">
       <button
         onClick={() => toggleFavorite(tool.id)}
         aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
@@ -47,6 +47,6 @@ export function ToolCard({ tool, isFavorite, toggleFavorite }: ToolCardProps) {
           Launch
         </button>
       </div>
-    </div>
+    </article>
   );
 }

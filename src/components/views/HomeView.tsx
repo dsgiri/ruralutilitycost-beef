@@ -28,30 +28,30 @@ export function HomeView({ tools, favorites, toggleFavorite, setView }: HomeView
       
       {/* Information Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+          <div className="bg-white border border-gray-200 rounded-lg p-5 sm:p-6">
             <h2 className="text-sm font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Tool Categories</h2>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
               <div className="flex items-center gap-3 p-3 border border-gray-50 rounded bg-gray-50/50 hover:bg-white cursor-pointer transition-colors">
-                <div className="w-8 h-8 rounded bg-blue-100 text-blue-900 flex items-center justify-center font-bold text-xs">FP</div>
-                <span className="text-xs font-semibold">Feed Planning</span>
+                <div className="w-8 h-8 rounded bg-blue-100 text-blue-900 flex items-center justify-center font-bold text-xs flex-shrink-0">FP</div>
+                <span className="text-xs font-semibold truncate">Feed Planning</span>
               </div>
               <div className="flex items-center gap-3 p-3 border border-gray-50 rounded bg-gray-50/50 hover:bg-white cursor-pointer transition-colors">
-                <div className="w-8 h-8 rounded bg-green-100 text-green-900 flex items-center justify-center font-bold text-xs">YP</div>
-                <span className="text-xs font-semibold">Yield/Carcass</span>
+                <div className="w-8 h-8 rounded bg-green-100 text-green-900 flex items-center justify-center font-bold text-xs flex-shrink-0">YP</div>
+                <span className="text-xs font-semibold truncate">Yield/Carcass</span>
               </div>
               <div className="flex items-center gap-3 p-3 border border-gray-50 rounded bg-gray-50/50 hover:bg-white cursor-pointer transition-colors">
-                <div className="w-8 h-8 rounded bg-orange-100 text-orange-900 flex items-center justify-center font-bold text-xs">PB</div>
-                <span className="text-xs font-semibold">Pasture Beef</span>
+                <div className="w-8 h-8 rounded bg-orange-100 text-orange-900 flex items-center justify-center font-bold text-xs flex-shrink-0">PB</div>
+                <span className="text-xs font-semibold truncate">Pasture Beef</span>
               </div>
               <div className="flex items-center gap-3 p-3 border border-gray-50 rounded bg-gray-50/50 hover:bg-white cursor-pointer transition-colors">
-                <div className="w-8 h-8 rounded bg-gray-200 text-gray-700 flex items-center justify-center font-bold text-xs">EA</div>
-                <span className="text-xs font-semibold">Enterprise</span>
+                <div className="w-8 h-8 rounded bg-gray-200 text-gray-700 flex items-center justify-center font-bold text-xs flex-shrink-0">EA</div>
+                <span className="text-xs font-semibold truncate">Enterprise Analysis</span>
               </div>
             </div>
           </div>
           
-          <div className="bg-slate-900 text-white rounded-lg p-6 relative overflow-hidden">
+          <div className="bg-slate-900 text-white rounded-lg p-5 sm:p-6 relative overflow-hidden">
             <div className="relative z-10 flex flex-col h-full">
               <h2 className="text-sm font-bold mb-2 text-blue-300">Decision Support Guarantee</h2>
               <p className="text-xs text-slate-300 leading-relaxed mb-4 flex-grow">
