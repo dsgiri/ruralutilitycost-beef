@@ -1,0 +1,6 @@
+{
+  "name": "Beef | Rural Utility Cost",
+  "description": "Cattle economics and production hub for estimating cattle costs, comparing feeding options, evaluating profitability, predicting break-even values, estimating yield, and planning beef production.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,68 @@
+import { Tool } from './types';
+
+export const TOOLS: Tool[] = [
+  {
+    id: 'beef-cost-production',
+    title: 'Beef Cost of Production Calculator',
+    description: 'Estimate total and per-head costs for your cow-calf or backgrounding operation.',
+    category: 'Cost of production',
+    primaryOutcome: 'Cost per head',
+    slug: 'cost-of-production',
+  },
+  {
+    id: 'feedlot-closeout',
+    title: 'Feedlot Closeout Calculator',
+    description: 'Analyze the final financial performance of a finished pen of cattle.',
+    category: 'Feedlot closeout',
+    primaryOutcome: 'Net return per head',
+    slug: 'feedlot-closeout',
+  },
+  {
+    id: 'break-even-sale',
+    title: 'Break-Even Sale Price Calculator',
+    description: 'Determine the minimum required sale price to cover rearing and feeding expenses.',
+    category: 'Break-even price',
+    primaryOutcome: 'Break-even $/cwt',
+    slug: 'break-even-price',
+  },
+  {
+    id: 'profit-per-head',
+    title: 'Profit per Head Estimator',
+    description: 'Quickly estimate potential profit margins based on market price and estimated costs.',
+    category: 'Profitability',
+    primaryOutcome: 'Expected margin',
+    slug: 'profit-estimator',
+  },
+  {
+    id: 'cattle-feed',
+    title: 'Cattle Feed Calculator',
+    description: 'Formulate basic rations and estimate total feed requirements and costs.',
+    category: 'Feed planning',
+    primaryOutcome: 'Total feed cost',
+    slug: 'feed-calculator',
+  },
+  {
+    id: 'pastured-beef',
+    title: 'Pastured Beef Enterprise Planner',
+    description: 'Plan grass-finished beef operations from pasture costs to direct consumer sales.',
+    category: 'Pasture-raised beef',
+    primaryOutcome: 'Enterprise ROI',
+    slug: 'pastured-beef',
+  },
+  {
+    id: 'carcass-yield',
+    title: 'Carcass Yield Estimator',
+    description: 'Forecast hanging weight and cut yields based on live animal weight.',
+    category: 'Yield and carcass planning',
+    primaryOutcome: 'Retail cuts yield',
+    slug: 'carcass-yield',
+  },
+  {
+    id: 'value-gain',
+    title: 'Value of Additional Gain Calculator',
+    description: 'Decide if feeding cattle to a heavier weight covers the additional feed costs.',
+    category: 'Enterprise analysis',
+    primaryOutcome: 'Net value of gain',
+    slug: 'value-additional-gain',
+  },
+];
