@@ -11,10 +11,11 @@ export function Footer({ setView }: FooterProps) {
       <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
         <nav aria-label="Footer Navigation" className="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-6 uppercase tracking-wider">
           <button onClick={() => setView('home')} className="hover:text-blue-900 transition-colors">Home</button>
-          <button onClick={() => setView('about')} className="hover:text-blue-900 transition-colors">About</button>
-          <button onClick={() => setView('contact')} className="hover:text-blue-900 transition-colors">Contact</button>
-          <button onClick={() => setView('legal')} className="hover:text-blue-900 transition-colors">Privacy</button>
-          <button onClick={() => setView('legal')} className="hover:text-blue-900 transition-colors">Disclaimer</button>
+          <a href="https://ruralutilitycost.com/about" className="hover:text-blue-900 transition-colors">About</a>
+          <a href="https://ruralutilitycost.com/contact" className="hover:text-blue-900 transition-colors">Contact</a>
+          <a href="https://ruralutilitycost.com/privacy-policy" className="hover:text-blue-900 transition-colors">Privacy</a>
+          <a href="https://ruralutilitycost.com/terms-of-use" className="hover:text-blue-900 transition-colors">Terms</a>
+          <a href="https://ruralutilitycost.com/disclaimer" className="hover:text-blue-900 transition-colors">Disclaimer</a>
           <button onClick={() => setView('license')} className="hover:text-blue-900 transition-colors">License</button>
           <a href="https://ruralutilitycost.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-900 transition-colors">RuralUtilityCost.com</a>
         </nav>

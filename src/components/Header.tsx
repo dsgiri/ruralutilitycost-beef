@@ -17,8 +17,8 @@ export function Header({ currentView, setView }: HeaderProps) {
     { label: 'What If', view: 'home' },
     { label: 'Predictor', view: 'home' },
     { label: 'My favorites', view: 'home', hash: '#favorites' },
-    { label: 'About', view: 'about' },
-    { label: 'Contact', view: 'contact' },
+    { label: 'About', url: 'https://ruralutilitycost.com/about' },
+    { label: 'Contact', url: 'https://ruralutilitycost.com/contact' },
   ];
 
   const handleNavClick = (view: ViewState, hash?: string) => {
@@ -57,15 +57,25 @@ export function Header({ currentView, setView }: HeaderProps) {
           
           <nav aria-label="Main Navigation" className="hidden md:flex space-x-1 lg:space-x-2 flex-1 ml-2 lg:ml-4 text-sm font-medium">
             {navItems.map((item) => (
-              <button
-                key={item.label}
-                onClick={() => handleNavClick(item.view as ViewState, item.hash)}
-                className={`transition-colors sidebar-link px-3 py-2 rounded-md ${
-                  currentView === item.view && !item.hash ? 'bg-blue-50 text-blue-900' : 'text-gray-600'
-                }`}
-              >
-                {item.label}
-              </button>
+              item.url ? (
+                <a
+                  key={item.label}
+                  href={item.url}
+                  className="transition-colors sidebar-link px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <button
+                  key={item.label}
+                  onClick={() => handleNavClick(item.view as ViewState, item.hash)}
+                  className={`transition-colors sidebar-link px-3 py-2 rounded-md ${
+                    currentView === item.view && !item.hash ? 'bg-blue-50 text-blue-900' : 'text-gray-600'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              )
             ))}
           </nav>
 
@@ -85,17 +95,27 @@ export function Header({ currentView, setView }: HeaderProps) {
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
-              <button
-                key={item.label}
-                onClick={() => handleNavClick(item.view as ViewState, item.hash)}
-                className={`block w-full text-left px-3 py-2 rounded-md font-medium text-sm ${
-                  currentView === item.view && !item.hash
-                    ? 'bg-blue-50 text-blue-900'
-                    : 'text-gray-600 hover:bg-gray-50 text-gray-900'
-                }`}
-              >
-                {item.label}
-              </button>
+              item.url ? (
+                <a
+                  key={item.label}
+                  href={item.url}
+                  className="block w-full text-left px-3 py-2 rounded-md font-medium text-sm text-gray-600 hover:bg-gray-50 text-gray-900"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <button
+                  key={item.label}
+                  onClick={() => handleNavClick(item.view as ViewState, item.hash)}
+                  className={`block w-full text-left px-3 py-2 rounded-md font-medium text-sm ${
+                    currentView === item.view && !item.hash
+                      ? 'bg-blue-50 text-blue-900'
+                      : 'text-gray-600 hover:bg-gray-50 text-gray-900'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              )
             ))}
           </div>
         </div>
