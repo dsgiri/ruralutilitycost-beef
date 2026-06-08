@@ -6,9 +6,10 @@ interface FavoritesProps {
   tools: Tool[];
   favorites: string[];
   toggleFavorite: (id: string) => void;
+  onLaunch?: (id: string) => void;
 }
 
-export function Favorites({ tools, favorites, toggleFavorite }: FavoritesProps) {
+export function Favorites({ tools, favorites, toggleFavorite, onLaunch }: FavoritesProps) {
   const favoriteTools = tools.filter(tool => favorites.includes(tool.id));
 
   if (favoriteTools.length === 0) {
@@ -32,6 +33,7 @@ export function Favorites({ tools, favorites, toggleFavorite }: FavoritesProps) 
               tool={tool} 
               isFavorite={true} 
               toggleFavorite={toggleFavorite} 
+              onLaunch={onLaunch}
             />
           ))}
         </div>

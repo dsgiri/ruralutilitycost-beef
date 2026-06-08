@@ -7,9 +7,10 @@ interface ToolCardProps {
   tool: Tool;
   isFavorite: boolean;
   toggleFavorite: (id: string) => void;
+  onLaunch?: (id: string) => void;
 }
 
-export function ToolCard({ tool, isFavorite, toggleFavorite }: ToolCardProps) {
+export function ToolCard({ tool, isFavorite, toggleFavorite, onLaunch }: ToolCardProps) {
   // Determine color based on category
   let categoryColor = "text-blue-600";
   if (tool.category.includes('Cost') || tool.category.includes('Plan')) categoryColor = "text-green-700";
@@ -43,7 +44,10 @@ export function ToolCard({ tool, isFavorite, toggleFavorite }: ToolCardProps) {
         <span className="text-[11px] font-mono bg-gray-50 px-2 py-1 border border-gray-100 rounded text-gray-700">
           Outcome: {tool.primaryOutcome}
         </span>
-        <button className="bg-blue-900 text-white text-xs px-3 py-1.5 rounded font-bold hover:bg-blue-800 transition-colors">
+        <button 
+          onClick={() => onLaunch && onLaunch(tool.id)}
+          className="bg-blue-900 text-white text-xs px-3 py-1.5 rounded font-bold hover:bg-blue-800 transition-colors"
+        >
           Launch
         </button>
       </div>

@@ -19,11 +19,13 @@ export function HomeView({ tools, favorites, toggleFavorite, setView }: HomeView
         tools={tools} 
         favorites={favorites} 
         toggleFavorite={toggleFavorite} 
+        onLaunch={(id) => setView('calculator-example')}
       />
       <ToolGrid 
         tools={tools} 
         favorites={favorites} 
         toggleFavorite={toggleFavorite} 
+        onLaunch={(id) => setView('calculator-example')}
       />
       
       {/* Information Section */}

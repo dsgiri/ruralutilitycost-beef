@@ -1,4 +1,4 @@
-export type ViewState = 'home' | 'about' | 'contact' | 'legal' | 'license';
+export type ViewState = 'home' | 'about' | 'contact' | 'legal' | 'license' | 'disclaimer' | 'calculator-example';
 
 export interface Tool {
   id: string;

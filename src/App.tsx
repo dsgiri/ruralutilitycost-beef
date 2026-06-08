@@ -9,6 +9,9 @@ import { LicenseView } from './components/views/LicenseView';
 import { TOOLS } from './data';
 import { ViewState } from './types';
 
+import { DisclaimerView } from './components/views/DisclaimerView';
+import { ExampleCalculatorView } from './components/views/ExampleCalculatorView';
+
 export default function App() {
   const [currentView, setCurrentView] = useState<ViewState>('home');
   const [favorites, setFavorites] = useState<string[]>([]);
@@ -52,6 +55,10 @@ export default function App() {
         return <LegalView />;
       case 'license':
         return <LicenseView />;
+      case 'disclaimer':
+        return <DisclaimerView />;
+      case 'calculator-example':
+        return <ExampleCalculatorView />;
       case 'home':
       default:
         return (

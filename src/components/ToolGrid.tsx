@@ -6,9 +6,10 @@ interface ToolGridProps {
   tools: Tool[];
   favorites: string[];
   toggleFavorite: (id: string) => void;
+  onLaunch?: (id: string) => void;
 }
 
-export function ToolGrid({ tools, favorites, toggleFavorite }: ToolGridProps) {
+export function ToolGrid({ tools, favorites, toggleFavorite, onLaunch }: ToolGridProps) {
   const categories = useMemo(() => {
     const cats = new Set(tools.map(t => t.category));
     return Array.from(cats);
@@ -31,6 +32,7 @@ export function ToolGrid({ tools, favorites, toggleFavorite }: ToolGridProps) {
               tool={tool} 
               isFavorite={favorites.includes(tool.id)} 
               toggleFavorite={toggleFavorite} 
+              onLaunch={onLaunch}
             />
           ))}
         </div>
