@@ -12,13 +12,13 @@ export function Header({ currentView, setView }: HeaderProps) {
 
   const navItems = [
     { label: 'Home', view: 'home' },
-    { label: 'Plan', view: 'home' },
-    { label: 'Forecast', view: 'home' }, 
-    { label: 'What If', view: 'home' },
-    { label: 'Predictor', view: 'home' },
+    { label: 'Plan', url: 'https://plan.ruralutilitycost.com/' },
+    { label: 'Forecast', url: 'https://forecast.ruralutilitycost.com/' }, 
+    { label: 'What If', url: 'https://whatif.ruralutilitycost.com/' },
+    { label: 'Predictor', url: 'https://predictor.ruralutilitycost.com/' },
     { label: 'My favorites', view: 'home', hash: '#favorites' },
     { label: 'About', url: 'https://ruralutilitycost.com/about' },
-    { label: 'Contact', url: 'https://ruralutilitycost.com/contact' },
+    { label: 'Contact', url: 'https://www.ruralutilitycost.com/contact' },
   ];
 
   const handleNavClick = (view: ViewState, hash?: string) => {
