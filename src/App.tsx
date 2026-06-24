@@ -12,6 +12,15 @@ import { ViewState } from './types';
 import { DisclaimerView } from './components/views/DisclaimerView';
 import { ExampleCalculatorView } from './components/views/ExampleCalculatorView';
 
+import { BeefCostOfProductionView } from './components/views/BeefCostOfProductionView';
+import { FeedlotCloseoutView } from './components/views/FeedlotCloseoutView';
+import { BreakEvenSalePriceView } from './components/views/BreakEvenSalePriceView';
+import { ProfitPerHeadView } from './components/views/ProfitPerHeadView';
+import { CattleFeedView } from './components/views/CattleFeedView';
+import { PasturedBeefView } from './components/views/PasturedBeefView';
+import { CarcassYieldView } from './components/views/CarcassYieldView';
+import { ValueOfAdditionalGainView } from './components/views/ValueOfAdditionalGainView';
+
 export default function App() {
   const [currentView, setCurrentView] = useState<ViewState>('home');
   const [favorites, setFavorites] = useState<string[]>([]);
@@ -59,6 +68,22 @@ export default function App() {
         return <DisclaimerView />;
       case 'calculator-example':
         return <ExampleCalculatorView />;
+      case 'cost-of-production':
+        return <BeefCostOfProductionView />;
+      case 'feedlot-closeout':
+        return <FeedlotCloseoutView />;
+      case 'break-even-price':
+        return <BreakEvenSalePriceView />;
+      case 'profit-estimator':
+        return <ProfitPerHeadView />;
+      case 'feed-calculator':
+        return <CattleFeedView />;
+      case 'pastured-beef':
+        return <PasturedBeefView />;
+      case 'carcass-yield':
+        return <CarcassYieldView />;
+      case 'value-additional-gain':
+        return <ValueOfAdditionalGainView />;
       case 'home':
       default:
         return (

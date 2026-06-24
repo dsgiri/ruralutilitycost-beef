@@ -19,13 +19,23 @@ export function HomeView({ tools, favorites, toggleFavorite, setView }: HomeView
         tools={tools} 
         favorites={favorites} 
         toggleFavorite={toggleFavorite} 
-        onLaunch={(id) => setView('calculator-example')}
+        onLaunch={(id) => {
+          const tool = tools.find(t => t.id === id);
+          if (tool && tool.slug) {
+            setView(tool.slug as ViewState);
+          }
+        }}
       />
       <ToolGrid 
         tools={tools} 
         favorites={favorites} 
         toggleFavorite={toggleFavorite} 
-        onLaunch={(id) => setView('calculator-example')}
+        onLaunch={(id) => {
+          const tool = tools.find(t => t.id === id);
+          if (tool && tool.slug) {
+            setView(tool.slug as ViewState);
+          }
+        }}
       />
       
       {/* Information Section */}

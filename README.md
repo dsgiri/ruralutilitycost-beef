@@ -1,20 +1,21 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Project Documentation Registry
 
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/44f81059-52ca-48b6-a101-34bee4423d30
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+| Priority | Name | File Name | Path | Short Description |
+|---|---|---|---|---|
+| Critical #01 | Product Requirements Document | `PRD.md` | `/docs/` | Product vision, user personas, and feature list |
+| Critical #02 | Design System / Style Guide | `SYSTEM_DESIGN.md` | `/docs/` | Colors, fonts, spacing, and component rules |
+| Critical #03 | Site Architecture & URL Map | `ARCHITECTURE.md` | `/docs/` | Page hierarchy, URL patterns, and directory structure |
+| Critical #05 | Data Models & Schema | `DATA_MODELS.md` | `/docs/` | Database tables, fields, types, and relationships |
+| Critical #06 | API & Integrations Spec | `API_SPEC.md` | `/docs/` | Third-party integrations like Stripe, GIA, and Resend |
+| High Priority | User Flows & Journey Maps | `USER_FLOWS.md` | `/docs/` | Step-by-step journeys for each user persona |
+| High Priority | SEO Strategy Document | `SEO_STRATEGY.md` | `/docs/` | Keyword targets, meta formulas, and schema specs |
+| High Priority | Revenue & Pricing Logic | `REVENUE_LOGIC.md` | `/docs/` | Monetization rules for claims, transfers, and NFC |
+| High Priority | Component Library Spec | `COMPONENTS.md` | `/docs/` | Reusable UI components with props and variants |
+| Operational | Email Templates Spec | `EMAILS.md` | `/docs/` | Transactional email specs for claims and verification |
+| Operational | Auth & Permissions Matrix | `AUTH.md` | `/docs/` | Access control and role-based permissions |
+| Operational | Admin & Ops Runbook | `RUNBOOK.md` | `/docs/` | Manual verification, disputes, and user management |
+| Operational | Analytics & KPI Spec | `ANALYTICS.md` | `/docs/` | Event tracking, key metrics, and dashboard specs |
+| Operational | NFC Implementation Spec | `NFC_SPEC.md` | `/docs/` | Tag formats, encoding, and tap-page behavior |
+| Living | Changelog | `CHANGELOG.md` | `/docs/` | Continuous log of features, bugs, and schema changes |
+| Living | Task Backlog | `BACKLOG.md` | `/docs/` | Prioritized list of upcoming development tasks |
+| Living | Known Issues & Decisions Log | `DECISIONS.md` | `/docs/` | Log of architectural choices and solved problems |

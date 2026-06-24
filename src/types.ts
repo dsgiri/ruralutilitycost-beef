@@ -1,4 +1,19 @@
-export type ViewState = 'home' | 'about' | 'contact' | 'legal' | 'license' | 'disclaimer' | 'calculator-example';
+export type ViewState = 
+  | 'home' 
+  | 'about' 
+  | 'contact' 
+  | 'legal' 
+  | 'license' 
+  | 'disclaimer' 
+  | 'calculator-example'
+  | 'cost-of-production'
+  | 'feedlot-closeout'
+  | 'break-even-price'
+  | 'profit-estimator'
+  | 'feed-calculator'
+  | 'pastured-beef'
+  | 'carcass-yield'
+  | 'value-additional-gain';
 
 export interface Tool {
   id: string;
